@@ -18,10 +18,11 @@ app.get('/weather', async (req, res) => {
     const city = req.query.city;
     console.log(city);
     //fetches the weather data from the API
-    const data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APIKEY}&q=${city}}`);
+    const data = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${APIKEY}&q=${city}&days=7&aqi=no&alerts=no`);
     //converts the data to json
     const weather = await data.json();
     console.log(weather);
+    console.log(weather.forecast);
     //returns the weather data
     res.send(weather);
     //returns the data

@@ -1,0 +1,12 @@
+/* remove acitve class from input */
+input {
+    outline: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+}
+
+input:focus {
+   outline: none;
+}

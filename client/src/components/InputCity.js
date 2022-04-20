@@ -8,7 +8,7 @@ function InputCity({ setData }) {
     const handleKeypress = e => {
       //it triggers by pressing the enter key
         if (e.keyCode === 13) {
-            setData(e, city);
+            setData(city);
             setCity('');
         }
     };
@@ -16,7 +16,7 @@ function InputCity({ setData }) {
   return (
     <div className='input-container'>
         <div className="container">
-            <input type="text" placeholder="Enter city name" value={city} onChange={e => setCity(e.target.value)} onKeyDown={handleKeypress} className="form-control" />
+            <input autoFocus type="text" placeholder="Enter city name" value={city} onChange={e => setCity(e.target.value)} onKeyDown={handleKeypress} className="" />
             {/* <button type="submit" onClick={e => setData(e, city)} className="btn btn-success btn-lg button">get weather</button> */}
         </div>
     </div>
